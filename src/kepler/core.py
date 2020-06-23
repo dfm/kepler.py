@@ -53,4 +53,4 @@ def kepler(M, ecc, tol=1e-10):
     cosf = (1 - tanf2_2) * denom
     sinf = 2 * tanf2 * denom
 
-    return E, cosf * m, sinf * m - 1.0 * m_inv
+    return E, cosf * m - 1.0 * m_inv, sinf * m

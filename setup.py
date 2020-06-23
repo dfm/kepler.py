@@ -32,7 +32,7 @@ INSTALL_REQUIRES = [
     "setuptools>=40.6.0",
     "setuptools_scm",
 ]
-EXTRA_REQUIRE = {}
+EXTRA_REQUIRE = {"test": ["pytest"]}
 
 # END PROJECT SPECIFIC
 

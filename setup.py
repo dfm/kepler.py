@@ -14,7 +14,7 @@ from setuptools.command.build_ext import build_ext
 
 # PROJECT SPECIFIC
 
-NAME = "kepler"
+NAME = "kepler.py"
 PACKAGES = find_packages(where="src")
 META_PATH = os.path.join("src", "kepler", "__init__.py")
 CLASSIFIERS = [
@@ -32,7 +32,7 @@ INSTALL_REQUIRES = [
     "setuptools>=40.6.0",
     "setuptools_scm",
 ]
-EXTRA_REQUIRE = {"test": ["pytest"]}
+EXTRA_REQUIRE = {"test": ["pytest"], "release": ["twine", "wheel", "pep517"]}
 
 # END PROJECT SPECIFIC
 
@@ -154,9 +154,7 @@ if __name__ == "__main__":
     setup(
         name=NAME,
         use_scm_version={
-            "write_to": os.path.join(
-                "src", NAME, "{0}_version.py".format(NAME)
-            ),
+            "write_to": os.path.join("src", "kepler", "kepler_version.py"),
             "write_to_template": '__version__ = "{version}"\n',
         },
         author=find_meta("author"),

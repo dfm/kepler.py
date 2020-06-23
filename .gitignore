@@ -3,3 +3,4 @@ kepler_version.py
 var
 build
 .envrc
+dist

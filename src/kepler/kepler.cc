@@ -4,6 +4,10 @@
 
 namespace py = pybind11;
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846264338328
+#endif
+
 // A solver for Kepler's equation based on:
 //
 // Nijenhuis (1991)

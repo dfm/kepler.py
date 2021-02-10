@@ -18,10 +18,10 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
-        
-      - name: Install Visual C++ for Python
+      
+      - uses: ilammy/msvc-dev-cmd@v1
         if: runner.os == 'Windows'
-        run: choco install vcpython27 -f -y
+        
       - uses: joerick/cibuildwheel@v1.9.0
         env:
           CIBW_BUILD: "cp3?-*"

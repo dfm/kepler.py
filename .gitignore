@@ -1,6 +1,10 @@
-kepler_version.py
-*.so
-var
-build
-.envrc
+/src/*/version.py
+*.pyc
+**/__pycache__
+*.egg-info
+.mypy_cache
+.tox
+.nox
+.coverage
+.coverage*
 dist

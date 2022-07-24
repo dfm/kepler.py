@@ -1,0 +1,27 @@
+_commit: v0.0.1
+_src_path: gh:dfm/copier-python
+author_email: foreman.mackey@gmail.com
+author_fullname: Dan Foreman-Mackey
+author_username: dfm
+code_of_conduct_email: foreman.mackey@gmail.com
+copyright_holder: Dan Foreman-Mackey
+copyright_license: MIT
+copyright_year: 2020-2022
+documentation_url: https://github.com/dfm/kepler.py
+enable_mypy: false
+enable_pybind11: true
+general_nox_sessions: '"build", "lint"'
+project_description: Fast and stable solver for Kepler's equation in Python
+project_development_status: beta
+project_line_length: 79
+project_name: kepler.py
+python_formal_min_version: 7
+python_max_version: 10
+python_min_version: 7
+python_nox_sessions: '"tests"'
+python_package_distribution_name: kepler.py
+python_package_import_name: kepler
+readthedocs_project_name: kepler.py
+repository_name: kepler.py
+repository_namespace: dfm
+

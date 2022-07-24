@@ -1,9 +1,7 @@
 [project]
 name = "kepler.py"
 description = "Fast and stable solver for Kepler's equation in Python"
-authors = [
-    { name="Dan Foreman-Mackey", email="foreman.mackey@gmail.com" },
-]
+authors = [{ name = "Dan Foreman-Mackey", email = "foreman.mackey@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.7"
 license = { file = "LICENSE" }
@@ -14,8 +12,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
 ]
 dynamic = ["version"]
-dependencies = [
-]
+dependencies = ["numpy"]
 
 [project.urls]
 "Homepage" = "https://github.com/dfm/kepler.py"
@@ -23,11 +20,8 @@ dependencies = [
 "Bug Tracker" = "https://github.com/dfm/kepler.py/issues"
 
 [project.optional-dependencies]
-test = [
-    "pytest",
-]
-docs = [
-]
+test = ["pytest"]
+docs = []
 
 [build-system]
 requires = [
@@ -60,11 +54,7 @@ known_first_party = ["kepler"]
 parallel = true
 branch = true
 source = ["kepler"]
-omit = [
-    "docs/*",
-    "tests/*",
-    "*/kepler/kepler_version.py",
-]
+omit = ["docs/*", "tests/*", "*/kepler/kepler_version.py"]
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]

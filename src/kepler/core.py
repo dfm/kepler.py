@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
-
 __all__ = ["kepler"]
 
 import numpy as np
 
-from .kepler import solve
+from kepler._core import solve
 
 
 def kepler(M, ecc, tol=1e-10):

@@ -1,4 +1,4 @@
-_commit: v0.0.1
+_commit: v0.0.2
 _src_path: gh:dfm/copier-python
 author_email: foreman.mackey@gmail.com
 author_fullname: Dan Foreman-Mackey
@@ -24,3 +24,4 @@ python_package_import_name: kepler
 readthedocs_project_name: kepler.py
 repository_name: kepler.py
 repository_namespace: dfm
+

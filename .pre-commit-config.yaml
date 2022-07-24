@@ -12,6 +12,7 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
         exclude_types: [json, binary]
+        exclude: ".copier-answers.yml"
   - repo: https://github.com/PyCQA/isort
     rev: "5.10.1"
     hooks:

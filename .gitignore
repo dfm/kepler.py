@@ -1,7 +1,9 @@
 /src/*/version.py
 *.pyc
-**/__pycache__
+__pycache__
 *.egg-info
+_skbuild
+*.so
 .mypy_cache
 .tox
 .nox

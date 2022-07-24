@@ -8,8 +8,8 @@ license = { file = "LICENSE" }
 classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Development Status :: 4 - Beta",
-    "License :: OSI Approved :: MIT License",
+"Development Status :: 4 - Beta",
+"License :: OSI Approved :: MIT License",
 ]
 dynamic = ["version"]
 dependencies = ["numpy"]

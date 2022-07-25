@@ -7,6 +7,13 @@ on:
     tags:
       - "*"
   pull_request:
+  workflow_dispatch:
+    inputs:
+      prerelease:
+        description: 'Run a pre-release, testing the build'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   tests:
@@ -18,6 +25,9 @@ jobs:
         nox-session: ["tests"]
         include:
           - os: macos-latest
+            python-version: "3.10"
+            nox-session: "tests"
+          - os: windows-latest
             python-version: "3.10"
             nox-session: "tests"
           - os: ubuntu-latest
@@ -64,9 +74,11 @@ jobs:
         run: python -m nox --non-interactive -s ${{ matrix.nox-session }}
 
   release:
+    if: ${{ inputs.prerelease || startsWith(github.ref, 'refs/tags/') }}
     needs: tests
     uses: dfm/workflows/.github/workflows/python-release.yml@main
     with:
       wheels: true
+      enable-windows: true
     secrets:
       pypi-token: ${{ secrets.pypi_password }}

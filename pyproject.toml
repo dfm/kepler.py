@@ -1,28 +1,63 @@
+[project]
+name = "kepler.py"
+description = "Fast and stable solver for Kepler's equation in Python"
+authors = [{ name = "Dan Foreman-Mackey", email = "foreman.mackey@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+]
+dynamic = ["version"]
+dependencies = ["numpy"]
+
+[project.urls]
+"Homepage" = "https://github.com/dfm/kepler.py"
+"Source" = "https://github.com/dfm/kepler.py"
+"Bug Tracker" = "https://github.com/dfm/kepler.py/issues"
+
+[project.optional-dependencies]
+test = ["pytest"]
+docs = []
+
 [build-system]
-requires = ["numpy>=1.13.0", "pybind11>=2.5.0", "setuptools>=40.6.0", "wheel", "setuptools_scm"]
+requires = [
+    "setuptools>=61.0",
+    "wheel",
+    "setuptools_scm",
+    "pybind11>=2.6",
+    "scikit-build",
+    "cmake",
+    "ninja; platform_system!='Windows'",
+]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/kepler/version.py"
 
 [tool.black]
 line-length = 79
-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-  | docs/tutorials
-)/
-'''
 
 [tool.isort]
+skip_glob = []
 line_length = 79
 multi_line_output = 3
 include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
+known_first_party = ["kepler"]
+
+[tool.coverage.run]
+parallel = true
+branch = true
+source = ["kepler"]
+omit = ["docs/*", "tests/*", "*/kepler/kepler_version.py"]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.report]
+show_missing = true

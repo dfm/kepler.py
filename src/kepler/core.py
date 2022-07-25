@@ -1,5 +1,3 @@
-__all__ = ["kepler"]
-
 import numpy as np
 
 from kepler._core import solve

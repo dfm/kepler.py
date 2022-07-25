@@ -66,7 +66,7 @@ jobs:
   release:
     needs: tests
     uses: dfm/workflows/.github/workflows/python-release.yml@main
-      with:
-        wheels: true
-      secrets:
-        pypi-token: ${{ secrets.pypi_token }}
+    with:
+      wheels: true
+    secrets:
+      pypi-token: ${{ secrets.pypi_password }}

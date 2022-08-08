@@ -1,0 +1,10 @@
+diff a/pyproject.toml b/pyproject.toml	(rejected hunks)
+@@ -62,7 +56,3 @@ branch = true
+ source = ["kepler"]
+-omit = [
+-    "docs/*",
+-    "tests/*",
+-    "*/kepler/kepler_version.py",
+-]
++omit = ["docs/*", "tests/*", "*/kepler/kepler_version.py"]
+ 

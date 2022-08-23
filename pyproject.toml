@@ -4,7 +4,7 @@ description = "Fast and stable solver for Kepler's equation in Python"
 authors = [{ name = "Dan Foreman-Mackey", email = "foreman.mackey@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.7"
-license = { file = "LICENSE" }
+license = { text = "MIT License" }
 classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
@@ -54,7 +54,11 @@ known_first_party = ["kepler"]
 parallel = true
 branch = true
 source = ["kepler"]
-omit = ["docs/*", "tests/*", "*/kepler/kepler_version.py"]
+omit = [
+    "docs/*",
+    "tests/*",
+    "*/kepler/version.py",
+]
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]

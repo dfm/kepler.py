@@ -1,9 +1,9 @@
-#include <pybind11/numpy.h>
-#include <pybind11/pybind11.h>
+// #include <nanobind/numpy.h>
+#include <nanobind/nanobind.h>
 
 #include <cmath>
 
-namespace py = pybind11;
+namespace nb = nanobind;
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846264338328
@@ -102,7 +102,7 @@ double solve(double M, double ecc) {
 
 }  // namespace kepler
 
-PYBIND11_MODULE(_core, m) {
-  m.doc() = "A fast and stable Kepler solver";
-  m.def("solve", py::vectorize(kepler::solve));
+NB_MODULE(_core, m) {
+  // m.doc() = "A fast and stable Kepler solver";
+  m.def("solve", kepler::solve);
 }
